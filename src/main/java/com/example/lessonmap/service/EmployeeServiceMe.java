@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+
 @Service
 public class EmployeeServiceMe implements EmployeeService {
 
@@ -18,8 +19,8 @@ public class EmployeeServiceMe implements EmployeeService {
     }
 
     @Override
-    public Employee add(String fillName, String lastName) {
-        Employee employee = new Employee(fillName, lastName);
+    public Employee add(String name, String surname) {
+        Employee employee = new Employee(name, surname);
         if (employeeList.contains(employee)) {
             throw new EmployeeAlreadyAddedException("Такой сотрудник уже есть");
         }
@@ -28,8 +29,8 @@ public class EmployeeServiceMe implements EmployeeService {
     }
 
     @Override
-    public Employee remove(String fillName, String lastName) {
-        Employee employee = new Employee(fillName, lastName);
+    public Employee remove(String name, String surname) {
+        Employee employee = new Employee(name, surname);
         if (employeeList.contains(employee)) {
             employeeList.remove(employee);
             return employee;
@@ -40,8 +41,8 @@ public class EmployeeServiceMe implements EmployeeService {
     }
 
     @Override
-    public Employee find(String fillName, String lastName) {
-        Employee employee = new Employee(fillName, lastName);
+    public Employee find(String name, String surname) {
+        Employee employee = new Employee(name, surname);
         if (employeeList.contains(employee)) {
             return employee;
         }

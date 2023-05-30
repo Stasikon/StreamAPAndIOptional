@@ -1,8 +1,6 @@
 package com.example.lessonmap.service;
 
-
 import com.example.lessonmap.domain.Employee;
-
 import java.util.Collection;
 
 public interface EmployeeService {
